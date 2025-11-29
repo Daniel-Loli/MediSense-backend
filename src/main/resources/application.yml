@@ -1,0 +1,19 @@
+application:
+  title: "mediaSense"
+  version: "1.0.0"
+
+spring:
+  banner:
+    location: banner.txt
+  jpa:
+    database: sql_server
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.SQLServerDialect
+  profiles:
+    active: ${APP_ENV}
+
+
+jwt:
+  secret: ${KEY_SECRET}
